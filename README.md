@@ -1,1 +1,1 @@
-A repository for simple we-based challenges for practice
+A repository for simple challenges for practice
