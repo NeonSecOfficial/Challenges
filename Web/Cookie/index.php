@@ -1,4 +1,5 @@
   <div class="wrapper">
+	  <!--Username:admin-->
     <form class="form-signin" action="admin.php" method="post">       
       <h2 class="form-signin-heading">Please login to access the Admin Panel</h2>
       <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
