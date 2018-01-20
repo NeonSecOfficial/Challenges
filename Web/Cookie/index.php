@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!--HardCore Security > HackProof > username: admin , password: ****** ha ha. -->
   <div class="wrapper">
     <form class="form-signin" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">       
+	  <!--Username:admin-->
+    <form class="form-signin" action="admin.php" method="post">       
       <h2 class="form-signin-heading">Please login to access the Admin Panel</h2>
       <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
       <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
