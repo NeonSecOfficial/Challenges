@@ -1,7 +1,24 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	$name = $_POST["username"];
+	$pass = $_POST["password"];
+	if($name == "admin" && $pass == "ne0ns3c" ) {
+		$cookie = "root";
+		setcookie($name, $cookie, time() + (86400 * 30), "/"); 
+		header("Location:admin.php");
+
+	}
+	else{
+		echo "Wrong Pass ! its HackProof";
+		
+	}
+}
+?>
+<!--HardCore Security > HackProof > username: admin , password: ****** ha ha. -->
   <div class="wrapper">
-    <form class="form-signin" action="admin.php" method="post">       
+    <form class="form-signin" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">       
       <h2 class="form-signin-heading">Please login to access the Admin Panel</h2>
-      <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+      <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
       <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
       <label class="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
