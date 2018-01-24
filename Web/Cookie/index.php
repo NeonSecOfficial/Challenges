@@ -4,14 +4,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$name = $_POST["username"];
 	$pass = $_POST["password"];
 	if($name == "admin" && $pass == "ne0ns3c" ) {
-
-		setcookie($name, $pass, time() + (86400 * 30), "/"); 
+		setcookie("user", "admin", time() + (86400 * 30), "/"); 
 		header("Location:admin.php");
 
 	}
 	else{
-		$cookie = "user";	
-		setcookie($cookie, $pass, time() + (86400 * 30), "/");
+		setcookie("user", "notadmin", time() + (86400 * 30), "/");
 		header("Location:admin.php");
  
 	}
