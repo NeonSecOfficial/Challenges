@@ -5,7 +5,7 @@ if(isset($_COOKIE["admin"])) {
     echo $_COOKIE["admin"];
 
 } else {
-	echo "You are not authorised!";
+	echo "You are not admin!";
     
 }
 ?>

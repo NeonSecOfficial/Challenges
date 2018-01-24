@@ -4,12 +4,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$name = $_POST["username"];
 	$pass = $_POST["password"];
 	if($name == "admin" && $pass == "ne0ns3c" ) {
-		setcookie($name, $cookie, time() + (86400 * 30), "/"); 
+
+		setcookie($name, $pass, time() + (86400 * 30), "/"); 
 		header("Location:admin.php");
 
 	}
 	else{
-		echo "Wrong Pass ! Its HackProof :P";
+		$cookie = "user";	
+		setcookie($cookie, $pass, time() + (86400 * 30), "/");
+		header("Location:admin.php");
+ 
 	}
 }
 ?>
