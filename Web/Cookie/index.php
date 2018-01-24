@@ -1,3 +1,4 @@
+<html>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$name = $_POST["username"];
@@ -8,13 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	}
 	else{
-		echo "Wrong Pass ! Its HackProof :P"
+		echo "Wrong Pass ! Its HackProof :P";
 	}
 }
 ?>
 <!--HardCore Security > HackProof > username: admin , password: ****** ha ha. -->
-
-  <div class="wrapper">
+<body>  
+<div class="wrapper">
     <form class="form-signin" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">       
       <h2 class="form-signin-heading">Please login to access the Admin Panel</h2>
       <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
@@ -25,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
     </form>
   </div>
+  </body>
+  </html>
 <!-- I love Cookies !-->
   <style type="text/css">
 
@@ -43,7 +46,7 @@ body {
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid rgba(0,0,0,0.1);  
-
+}
   .form-signin-heading,
 	.checkbox {
 	  margin-bottom: 30px;
@@ -76,6 +79,5 @@ body {
 	  border-top-left-radius: 0;
 	  border-top-right-radius: 0;
 	}
-}
 
   </style>

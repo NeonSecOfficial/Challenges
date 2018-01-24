@@ -1,13 +1,14 @@
-
+<html>
 <?php
 if(isset($_COOKIE["admin"])) {
-    echo "\n\nFlag is: C00k1Es are Del1ci0us";
+    echo "\n\nFlag is: C00k1Es ar3 Del1ci0us";
+    echo $_COOKIE["admin"];
 
 } else {
 	echo "You are not authorised!";
     
 }
 ?>
-
+<body>
 </body>
 </html>
